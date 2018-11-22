@@ -42,7 +42,7 @@ result_fields = {
     'status': fields.Integer,
     'time': fields.String,
     'err': fields.String(default=''),
-    'data': fields.Nested(user_data)
+    'data': fields.Nested(user_data, default='')
 }
 
 
