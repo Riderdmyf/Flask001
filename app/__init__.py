@@ -1,5 +1,6 @@
 from flask import Flask
 
+from app.apis import init_api
 from app.ext import init_ext
 from app.settings import init_app
 from app.views import init_blue
@@ -13,4 +14,7 @@ def create_app(env_name = 'default'):
     init_ext(app)
 
     init_blue(app)
+
+    init_api(app)
+
     return app
