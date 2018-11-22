@@ -11,7 +11,7 @@ class BaseConfig(object):
 
 class DevelopConfig(BaseConfig):
     Debug = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:////' + os.path.join(BASE_DIR, 'develop.db')
+    SQLALCHEMY_DATABASE_URI = 'sqlite:////' + os.path.join(BASE_DIR, 'test.db')
 
 
 config = {
