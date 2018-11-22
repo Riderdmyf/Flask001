@@ -26,10 +26,15 @@ parser.add_argument('email', type=str, required=True, help='Please tell me your 
 }
 '''
 
+class IconPath(fields.Raw):
+    def format(self, value):
+        return '/static/img/' + value
+
 user_data = {
     'name': fields.String,
     'token': fields.String,
-    'icon': fields.String,
+    # 'icon': fields.String,
+    'icon':IconPath(attribute='icon'),
 }
 
 result_fields = {
